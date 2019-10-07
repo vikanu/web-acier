@@ -113,22 +113,12 @@
 
 
         <div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KBz4Y4WKsOM?rel=0&autoplay=1&loop=1&mute=1" allowfullscreen frameborder="0"></iframe>
-</div>
-          <!-- <div class="col-md-12 col-lg-12 animated fadeInUp" data-wow-duration="1.4s"> -->
-            <!-- <video width="100%" height="100%" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-      <source src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" type="video/mp4">
-    </video> -->
-    
-           
-        <!-- </div> -->
-
-      <!-- </div> -->
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KBz4Y4WKsOM?autoplay=1&loop=1&mute=1&rel=0&controls=0" allowfullscreen frameborder="0"></iframe>
+          <!-- <iframe width="100%" height="425" src="https://www.youtube.com/embed/KBz4Y4WKsOM?autoplay=1&showinfo=0&loop=1&rel=0&mute=1" frameborder="0" allowfullscreen></iframe> -->
+        </div>
     </section><!-- #services -->
 
-    <!--==========================
-      Features Section
-    ============================-->
+   
     <section id="features">
       <div class="container">
 
@@ -157,9 +147,7 @@
     </section>
 
     
-    <!--==========================
-      Features Section
-    ============================-->
+    
     <section id="features">
       <div class="container">
 
