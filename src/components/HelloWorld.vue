@@ -1,61 +1,15 @@
 <template>
   <div class="hello">
-    <header id="header">
-
-    <!-- <div id="topbar">
-      <div class="container">
-        <div class="social-links">
-          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-        </div>
-      </div>
-    </div> -->
-
+    <header id="header">    
     <div class="container">
 
       <div class="logo float-left">
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <h1 class="text-light"><img alt="Acier Logo" src="../assets/logo.png"></h1>
-        <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
+        <a href="#header" class="scrollto"><img src="../assets/logo.png" alt="" class="img-fluid"></a>
       </div>
-
-      <!-- <nav class="main-nav float-right d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="#intro">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="drop-down"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Drop Down 2</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li>
-          <li><a href="#footer">Contact Us</a></li>
-        </ul>
-      </nav> -->
-      <!-- .main-nav -->
-      
     </div>
   </header><!-- #header -->
   
-  <!--==========================
-    Intro Section
-  ============================-->
+  
   <section id="intro" class="clearfix">
     <div class="container d-flex h-100">
       <div class="row justify-content-center align-self-center">
@@ -77,12 +31,10 @@
 
   <main>
     
-    <!--==========================
-      About Us Section
-    ============================-->
+    
     <section id="about">
 
-      <div class="container">
+      <div data-aos="fade-up" class="container">
         <div class="row">
 
           <div class="col-lg-5 col-md-6">
@@ -93,15 +45,12 @@
 
           <div class="col-lg-7 col-md-6">
             <div class="about-content">
-              <h5 class="pt-2">TENTANG KAMI</h5>
+              <h5 class="pt-2" >TENTANG KAMI</h5>
+              
               <h3>Apa "Renewable Energy Generation System" itu?</h3>
               <p>Renewable Energy Generation System adalah sebuah gagasan dalam bidang teknologi dari tim Acier Energy untuk menciptakan inovasi energi terbarukan menggunakan turbin vortek dan solar panel. Dalam bentuk pembangkit listrik, menghasilkan energi yang bisa dimanfaatkan secara bersama. Dapat saling menghasilkan dan memberi energi ramah lingkungan perumahan dan memanajemen pemakaian sumber daya energi.</p>
               <p>Berbentuk "Storage Bank", yang mampu menyimpan kapasitas daya listrik. sehingga dapat digunakan sebagai alternatif pembangkit listrik dalam kapasitas perumahan.</p>
-              <!-- <ul>
-                <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="ion-android-checkmark-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-              </ul> -->
+              
             </div>
           </div>
         </div>
@@ -113,21 +62,21 @@
     <!--==========================
       Services Section
     ============================-->
-    <section id="services" class="section-bg">
+    <section data-aos="fade-up" id="services" class="section-bg">
       <div class="container">
 
         <header class="section-header text-center">
-          <h5 class="pt-2">PRODUK</h5>
+          <h5 class="pt-2">Penyusun Storage Bank</h5>
           <p>Berikut ini merupakan rangkaian dari Storage Bank yang kami kembangkan</p>
         </header>
 
         <div class="row">
 
-          <div class="col-md-6 col-lg-4 animated fadeInLeft">
+          <div data-aos="fade-right" class="col-md-6 col-lg-4">
             <div class="box">
               <div class="icon" style="background: #fceef3;"><img :src="require(`../assets/lampu.png`)" class="image"/><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
-              <h4 class="title">Storage Bank</h4>
-              <p class="description text-center">Storage Bank Acier Energy untuk pembangkit listrik ramah lingkungan.</p>
+              <h4 class="title">Solar Panel</h4>
+              <p class="description text-center">Solar Panel untuk pembangkit listrik ramah lingkungan.</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
@@ -138,7 +87,7 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4 animated fadeInRight">
+          <div data-aos="fade-left" class="col-md-6 col-lg-4">
             <div class="box">
               <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
               <h4 class="title">LoT</h4>
@@ -150,10 +99,11 @@
 
       </div>
     </section><!-- #services -->
+
     <!--==========================
       Services Section
     ============================-->
-    <section id="services" class="section-bg">
+    <section data-aos="fade-up" id="services" class="section-bg">
       <!-- <div class="container-fluid"> -->
 
         <header class="section-header text-center">
@@ -161,10 +111,14 @@
           <p>Video ini merupakan ide awal dari tim Acier Energy untuk membuat alat pembangkit listrik ramah lingkungan dengan instalasi yang mudah.</p>
         </header>
 
+
+        <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KBz4Y4WKsOM?rel=0&autoplay=1&loop=1&mute=1" allowfullscreen frameborder="0"></iframe>
+</div>
           <!-- <div class="col-md-12 col-lg-12 animated fadeInUp" data-wow-duration="1.4s"> -->
-            <video width="100%" height="100%" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-      <source src="../assets/final.mp4" type="video/mp4">
-    </video>
+            <!-- <video width="100%" height="100%" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" type="video/mp4">
+    </video> -->
     
            
         <!-- </div> -->
@@ -180,24 +134,86 @@
 
         <div class="row feature-item mt-5 pt-2">
           <div class="col-lg-6 order-1 order-lg-2">
-            <img src="../assets/lampu.svg" class="img-fluid" alt="">
+            <img src="../assets/lampu.svg" data-aos="fade-right" data-aos-offset="300"
+     data-aos-easing="ease-in-sine" class="img-fluid" alt="">
           </div>
 
-          <div class="func col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+          <div data-aos="fade-left" data-aos-offset="300"
+     data-aos-easing="ease-in-sine" class="func col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
             <h4 class="pt-2">Kegunaan Storage Bank dari Acier Energy</h4>
             <p>
              Ide awal dari tim Acier dalam mengembangkan alat Storage Bank ini adalah untuk menjadi alternatif pembangkit listrik yang disuplay dari Perusahaan Listrik Negara.  
             </p>
             <ul>
-                <li><i class="ion-android-checkmark-circle"></i> Sebagai pengganti bahan bakar fosil</li>
-                <li><i class="ion-android-checkmark-circle"></i> Pembangkit listrik ramah lingkungan</li>
-                <li><i class="ion-android-checkmark-circle"></i> Proses instalasi yang mudah</li>
+                <li><i class=""></i> Sebagai pengganti bahan bakar fosil</li>
+                <li><i class=""></i> Pembangkit listrik ramah lingkungan</li>
+                <li><i class=""></i> Proses instalasi yang mudah</li>
               </ul>
           </div>
           
         </div>
 
       </div>
+    </section>
+
+    
+    <!--==========================
+      Features Section
+    ============================-->
+    <section id="features">
+      <div class="container">
+
+        <div class="row feature-item mt-5 pt-2">
+          <div data-aos="fade-down-right" data-aos-offset="300"
+     data-aos-easing="ease-in-sine" class="col-lg-5 order-3 order-lg-1">
+            <img src="../assets/lampu.svg" class="img-fluid" alt="">
+          </div>
+
+          <div class="func col-lg-7 pt-4 pt-lg-0 order-1 order-lg-2">
+            <h4 class="pt-2">Spesifikasi Storage Bank</h4>
+            <div  class="row">
+              <div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-1">
+                <div class="spec pb-2">
+                  <div class="spec-header font-weight-bold">AC Voltage</div>
+                  <div class="spec-detail">120/240 Volt </div>
+                </div>
+                <div class="spec pb-2">
+                  <div class="spec-header font-weight-bold">Feed-In Type</div>
+                  <div class="spec-detail">Split Phase</div>
+                </div>
+                <div class="spec pb-2">
+                  <div class="spec-header font-weight-bold">Total Energy</div>
+                  <div class="spec-detail">114 kWh</div>
+                </div>
+                <div class="spec pb-2">
+                  <div class="spec-header font-weight-bold">Grid Frequency</div>
+                  <div class="spec-detail">60 Hz</div>
+                </div>
+                
+              </div>
+              <div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2">
+                <div class="spec pb-2">
+                  <div class="spec-header font-weight-bold">Usable Energy</div>
+                  <div class="spec-detail">13.5 kWh</div>
+                </div>
+                <div class="spec pb-2">
+                  <div class="spec-header font-weight-bold">Max Continuous</div>
+                  <div class="spec-detail">5 kW</div>
+                </div>
+                <div class="spec pb-2">
+                  <div class="spec-header font-weight-bold">Peak</div>
+                  <div class="spec-detail">(10s, off-grid/backup)2 7 kW</div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          </div>
+
+          
+          
+        </div>
+
     </section>
 
     
@@ -431,10 +447,6 @@
                   <div class="validation"></div>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
                   <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Ketik pesan anda di sini" placeholder="Message"></textarea>
                   <div class="validation"></div>
                 </div>
@@ -465,9 +477,13 @@
 
 <script>
 export default {
+  el: '#example-3',
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data: {
+    show: true
   }
 }
 </script>
@@ -480,6 +496,13 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 body {
   background: #fff;
   color: #444;
@@ -833,8 +856,12 @@ h5{
 }
 
 
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
 #header {
-  height: 110px;
+  height: 80px;
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
@@ -845,6 +872,7 @@ h5{
   right: 0;
   transition: all 0.5s;
   z-index: 997;
+  background-color: #fafdff;
 }
 
 #header.header-scrolled,
@@ -880,6 +908,10 @@ h5{
   padding: 0;
   margin: 7px 0;
   max-height: 26px;
+}
+
+.main-pages {
+  margin-top: 60px;
 }
 
 
@@ -1082,7 +1114,13 @@ h5{
   text-align: left;
 }
 
-
+/* spesifikasi */
+.spec-detail{
+  font-family: 'Ubuntu',sans-serif;
+}
+.spec-header{
+  color:#394042;
+}
 
 /* Why Us Section
 --------------------------------*/
