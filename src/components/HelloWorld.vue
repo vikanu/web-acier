@@ -469,7 +469,7 @@ export default {
   },
   methods:{
     handlee:function(event){
-      if(window.scrollY > 650){
+      if(window.scrollY > 80){
         this.color = '#fafdff'
         this.shadows = '0px 0px 30px rgba(127, 137, 161, 0.3)'
       }else{
@@ -497,7 +497,7 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
 .video-container{
-  width:100vw;
+  width:100%;
   height:100vh;
   overflow:hidden;
   position:relative;
