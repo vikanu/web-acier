@@ -1,19 +1,18 @@
 <template>
   <div class="hello">
-    <header id="header">    
-    <div class="container">
-
-      <div class="logo float-left">
-        <a href="#header" class="scrollto"><img src="../assets/logo.png" alt="" class="img-fluid"></a>
+    <header  id="header" v-bind:style="{'background-color':color,'box-shadow': shadows }">  
+      <div class="container" >
+        <div  class="logo float-left" v-on:scroll.passive="handlee">
+          <a href="#header"><img src="../assets/logo.png" alt="" class="img-fluid"></a>
+        </div>
       </div>
-    </div>
-  </header><!-- #header -->
-  
-  
+    </header>
+
   <section id="intro" class="clearfix">
     <div class="container d-flex h-100">
       <div class="row justify-content-center align-self-center">
         <div class="col-md-6 intro-info order-md-first order-last">
+          
           <h2>Renewable Energy<br>Generation <span class="color:1493f5">Systems</span></h2>
           <p>Inovasi teknologi terbarukan dalam penggunaan energi ramah lingkungan.</p>
           <!-- <div>
@@ -74,14 +73,14 @@
 
           <div data-aos="fade-right" class="col-md-6 col-lg-4">
             <div class="box">
-              <div class="icon" style="background: #fceef3;"><img :src="require(`../assets/lampu.png`)" class="image"/><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+              <div class="icon"><img :src="require(`../assets/solar-panel.png`)" class="image"/></div>
               <h4 class="title">Solar Panel</h4>
               <p class="description text-center">Solar Panel untuk pembangkit listrik ramah lingkungan.</p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+          <div class="col-md-6 col-lg-4">
             <div class="box">
-              <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
+              <div class="icon"><img :src="require(`../assets/baterai-acier.png`)" class="image"/></div>
               <h4 class="title">Baterai</h4>
               <p class="description text-center">Dalam pembuatan alat menggunakan baterai jenis Li-FePo4</p>
             </div>
@@ -89,9 +88,9 @@
 
           <div data-aos="fade-left" class="col-md-6 col-lg-4">
             <div class="box">
-              <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
-              <h4 class="title">LoT</h4>
-              <p class="description text-center">Menggunkan teknologi LoT(internet Of Thing), Liquid Cooling Graphene, Battery Inverter fast charging</p>
+              <div class="icon"><img :src="require(`../assets/iot.png`)" class="image"/></div>
+              <h4 class="title">IoT</h4>
+              <p class="description text-center">Menggunkan teknologi IoT(internet Of Thing), Liquid Cooling Graphene, Battery Inverter fast charging</p>
             </div>
           </div>
           
@@ -100,9 +99,7 @@
       </div>
     </section><!-- #services -->
 
-    <!--==========================
-      Services Section
-    ============================-->
+    <!-- Video-ACIER section -->
     <section data-aos="fade-up" id="services" class="section-bg">
       <!-- <div class="container-fluid"> -->
 
@@ -110,22 +107,24 @@
           <h3>Storage Bank Acier Energy</h3>
           <p>Video ini merupakan ide awal dari tim Acier Energy untuk membuat alat pembangkit listrik ramah lingkungan dengan instalasi yang mudah.</p>
         </header>
-
-
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KBz4Y4WKsOM?autoplay=1&loop=1&mute=1&rel=0&controls=0&autopause=0&playlist=KBz4Y4WKsOM" allow="autoplay; fullscreen" allowfullscreen frameborder="0"></iframe>
-          <!-- <iframe width="100%" height="425" src="https://www.youtube.com/embed/KBz4Y4WKsOM?autoplay=1&showinfo=0&loop=1&rel=0&mute=1" frameborder="0" allowfullscreen></iframe> -->
+        <div class="video-container" >
+          <div class="video-foreground">
+            <iframe
+               src="https://www.youtube.com/embed/KBz4Y4WKsOM?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=KBz4Y4WKsOM&mute=1"
+               frameBorder="0" allowFullScreen>
+            </iframe>
+          </div>
         </div>
-    </section><!-- #services -->
+    </section><!-- #video -->
 
    
     <section id="features">
       <div class="container">
 
         <div class="row feature-item mt-5 pt-2">
-          <div class="col-lg-6 order-1 order-lg-2">
-            <img src="../assets/lampu.svg" data-aos="fade-right" data-aos-offset="300"
-     data-aos-easing="ease-in-sine" class="img-fluid" alt="">
+          <div class="col-lg-6 order-1 order-lg-2 text-center">
+            <img src="../assets/baterai.svg" data-aos="fade-right" data-aos-offset="300"
+     data-aos-easing="ease-in-sine" class="img-fluid" width="50%" height="40%" alt="">
           </div>
 
           <div data-aos="fade-left" data-aos-offset="300"
@@ -146,18 +145,17 @@
       </div>
     </section>
 
-    
-    
-    <section id="features">
+    <section id="specification">
       <div class="container">
 
-        <div class="row feature-item mt-5 pt-2">
-          <div data-aos="fade-down-right" data-aos-offset="300"
-     data-aos-easing="ease-in-sine" class="col-lg-5 order-3 order-lg-1">
-            <img src="../assets/lampu.svg" class="img-fluid" alt="">
+        <div class="row spec-item mt-5 pt-2">
+          <div data-aos="fade-right" data-aos-offset="300"
+     data-aos-easing="ease-in-sine" class="col-lg-5 order-3 order-lg-1 text-center" >
+            <img src="../assets/baterai.svg" height="50%" width="50%" class="img-fluid" alt="">
           </div>
 
-          <div class="func col-lg-7 pt-4 pt-lg-0 order-1 order-lg-2">
+          <div data-aos="fade-left" data-aos-offset="300"
+     data-aos-easing="ease-in-sine" class="specification col-lg-7 pt-4 pt-lg-0 order-1 order-lg-2">
             <h4 class="pt-2">Spesifikasi Storage Bank</h4>
             <div  class="row">
               <div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-1">
@@ -207,17 +205,14 @@
     
    <!-- testimoni -->
     
-    <section id="testimonials">
-      <div class="container">
-<transition
-    name="custom-classes-transition"
-    enter-active-class="animated tada"
-    leave-active-class="animated bounceOutRight"
-  >
+    <section data-aos="fade-up" data-aos-offset="300"
+     data-aos-easing="ease-in-sine" id="testimonials">
+      <div class="container pt-5 pb-5">
+
         <header class="section-header text-center">
           <h3>Testimonial</h3>
         </header>
-</transition>
+
         <div class="row justify-content-center">
           <div class="col-lg-10">
             
@@ -286,7 +281,7 @@
     <!--==========================
       Team Section
     ============================-->
-    <section id="team" class="section-bg">
+    <section id="team" class="section-bg pt-3">
       <div class="container">
         <div class="section-header text-center">
           <h3>Tim Acier Energy</h3>
@@ -295,7 +290,7 @@
 
         <div class="row">
 
-          <div class="col-lg-3 col-md-6 wow fadeInUp">
+          <div class="col-lg-3 col-md-6">
             <div class="member">
               <img src="../assets/team-1.jpg" class="img-fluid" alt="">
               <div class="member-info">
@@ -308,7 +303,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-lg-3 col-md-6">
             <div class="member">
               <img src="../assets/team-2.jpg" class="img-fluid" alt="">
               <div class="member-info">
@@ -321,9 +316,9 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+          <div class="col-lg-3 col-md-6">
             <div class="member">
-              <img src="../assets/team-1.jpg" class="img-fluid" alt="">
+              <img src="../assets/images3.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Rozy</h4>
@@ -334,9 +329,9 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="col-lg-3 col-md-6">
             <div class="member">
-              <img src="../assets/team-2.jpg" class="img-fluid" alt="">
+              <img src="../assets/images4.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Rozy</h4>
@@ -465,14 +460,30 @@
 
 <script>
 export default {
-  el: '#example-3',
   name: 'HelloWorld',
-  props: {
-    msg: String
+  data(){ 
+    return{
+      color:'',
+      shadows:''
+    }
   },
-  data: {
-    show: true
-  }
+  methods:{
+    handlee:function(event){
+      if(window.scrollY > 650){
+        this.color = '#fafdff'
+        this.shadows = '0px 0px 30px rgba(127, 137, 161, 0.3)'
+      }else{
+        this.color = ''
+        this.shadows = ''
+      }
+    }
+  },
+  created: function () {
+        window.addEventListener('scroll', this.handlee);
+    },
+    destroyed: function () {
+        window.removeEventListener('scroll', this.handlee);
+    }
 }
 </script>
 
@@ -484,6 +495,36 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+.video-container{
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+  position:relative;
+}
+
+
+.video-container iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-container iframe {
+  pointer-events: none;
+}
+.video-container iframe{
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 120px);
+}
+.video-foreground{
+  pointer-events:none;
+}
 
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;
@@ -814,39 +855,7 @@ h5{
   color: #fff;
 }
 
-/*--------------------------------------------------------------
-# Top Bar
---------------------------------------------------------------*/
-
-#topbar {
-  padding: 0 0 10px 0;
-  font-size: 14px;
-  transition: all 0.5s;
-}
-
-#topbar .social-links {
-  text-align: right;
-}
-
-#topbar .social-links a {
-  color: #535074;
-  padding: 4px 12px;
-  display: inline-block;
-  line-height: 1px;
-}
-
-#topbar .social-links a:hover {
-  color: #1bb1dc;
-}
-
-#topbar .social-links a:first-child {
-  border-left: 0;
-}
-
-
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
+/* Header */
 
 #header {
   height: 80px;
@@ -860,7 +869,7 @@ h5{
   right: 0;
   transition: all 0.5s;
   z-index: 997;
-  background-color: #fafdff;
+  /* background-color: #fafdff; */
 }
 
 #header.header-scrolled,
@@ -1069,11 +1078,12 @@ h5{
 #services .icon {
   margin: 0 auto 15px auto;
   padding-top: 12px;
+  padding-bottom:12px;
   display: inline-block;
   text-align: center;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  /* border-radius: 50%; */
+  width: 90%;
+  height: 90%;
 }
 
 #services .icon i {
@@ -1110,95 +1120,7 @@ h5{
   color:#394042;
 }
 
-/* Why Us Section
---------------------------------*/
 
-#why-us {
-  padding: 60px 0;
-}
-
-#why-us .why-us-content .features {
-  margin: 0 0 15px 0;
-  padding: 0;
-  transition: 0.3s ease-in-out;
-}
-
-#why-us .why-us-content .features i {
-  font-size: 36px;
-  float: left;
-}
-
-#why-us .why-us-content .features h4 {
-  font-size: 24px;
-  font-weight: 600;
-  margin-left: 56px;
-  color: #413e66;
-  margin-bottom: 5px;
-}
-
-#why-us .why-us-content .features p {
-  font-size: 16px;
-  margin-left: 56px;
-  color: #555186;
-}
-
-#why-us .counters {
-  padding-top: 40px;
-}
-
-#why-us .counters span {
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  font-size: 48px;
-  display: block;
-  color: #555186;
-}
-
-#why-us .counters p {
-  padding: 0;
-  margin: 0 0 20px 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  color: #8a87b6;
-}
-
-/* Call To Action Section
---------------------------------*/
-
-#call-to-action {
-  background: #2d2b46;
-  background-size: cover;
-  padding: 40px 0;
-}
-
-#call-to-action .cta-title {
-  color: #fff;
-  font-size: 28px;
-  font-weight: 700;
-}
-
-#call-to-action .cta-text {
-  color: #fff;
-}
-
-#call-to-action .cta-btn {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 8px 26px;
-  border-radius: 3px;
-  transition: 0.5s;
-  margin: 10px;
-  border: 3px solid #fff;
-  color: #fff;
-}
-
-#call-to-action .cta-btn:hover {
-  background: #1bb1dc;
-  border: 3px solid #1bb1dc;
-}
 
 /* Features Section
 --------------------------------*/
@@ -1224,146 +1146,28 @@ h5{
   border-radius: 2px;
 }
 
-/* Portfolio Section
---------------------------------*/
 
-#portfolio {
-  padding: 60px 0;
+/* specification */
+
+#specification {
+  padding: 80px 0;
 }
 
-#portfolio #portfolio-flters {
-  padding: 0;
-  margin: 5px 0 35px 0;
-  list-style: none;
-  text-align: center;
+#specification h4 {
+  font-weight: 600;
+  font-size: 24px;
 }
-
-#portfolio #portfolio-flters li {
-  cursor: pointer;
-  margin: 15px 15px 15px 0;
-  display: inline-block;
-  padding: 6px 10px;
-  font-size: 16px;
-  line-height: 20px;
-  color: #413e66;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-#portfolio #portfolio-flters li:hover,
-#portfolio #portfolio-flters li.filter-active {
-  color: #1bb1dc;
-}
-
-#portfolio #portfolio-flters li:last-child {
-  margin-right: 0;
-}
-
-#portfolio .portfolio-item {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 30px;
-}
-
-#portfolio .portfolio-item .portfolio-wrap {
-  overflow: hidden;
-  position: relative;
-  margin: 0;
-}
-
-#portfolio .portfolio-item .portfolio-wrap:hover img {
-  opacity: 0.4;
-  transition: 0.3s;
-}
-
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  text-align: center;
-  opacity: 0;
-  transition: 0.2s linear;
-}
-
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info h4 {
-  font-size: 22px;
-  line-height: 1px;
-  font-weight: 700;
-  margin-bottom: 14px;
-  padding-bottom: 0;
-}
-
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info h4 a {
-  color: #fff;
-}
-
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info h4 a:hover {
-  color: #1bb1dc;
-}
-
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info p {
-  padding: 0;
-  margin: 0;
-  color: #f8fcff;
-  font-weight: 500;
-  font-size: 14px;
-  text-transform: uppercase;
-}
-
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-preview,
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-details {
-  display: inline-block;
-  line-height: 1;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  background: #1bb1dc;
-  border-radius: 50%;
-  margin: 10px 4px 0 4px;
-}
-
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-preview i,
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-details i {
-  padding-top: 6px;
-  font-size: 22px;
-  color: #fff;
-}
-
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-preview:hover,
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-details:hover {
-  background: #42c3e8;
-}
-
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-preview:hover i,
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-details:hover i {
-  color: #fff;
-}
-
-#portfolio .portfolio-item .portfolio-wrap:hover {
-  background: #282646;
-}
-
-#portfolio .portfolio-item .portfolio-wrap:hover .portfolio-info {
-  opacity: 1;
+.specification:before{
+  display: block;
+  content: '';
+  background: #1493f5;
+  /* background-color: #ffc200; opacity: 0.8; */
+  
+  height: 4px;
+  margin-top: 0;
+  margin-left: 0;
+  width: 50px;
+  border-radius: 2px;
 }
 
 /* Testimonials Section
@@ -1503,197 +1307,6 @@ h5{
 #team .member .social i {
   font-size: 18px;
   margin: 0 2px;
-}
-
-/* Clients Section
---------------------------------*/
-
-#clients {
-  padding: 60px 0;
-}
-
-#clients img {
-  max-width: 80%;
-  opacity: 0.5;
-  transition: 0.3s;
-  padding: 15px 0;
-}
-
-#clients img:hover {
-  opacity: 1;
-}
-
-#clients .owl-nav,
-#clients .owl-dots {
-  margin-top: 5px;
-  text-align: center;
-}
-
-#clients .owl-dot {
-  display: inline-block;
-  margin: 0 5px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ddd;
-}
-
-#clients .owl-dot.active {
-  background-color: #1bb1dc;
-}
-
-/* Pricing Section
---------------------------------*/
-
-#pricing {
-  padding: 80px 0;
-}
-
-#pricing .card {
-  border: 0;
-  border-radius: 0px;
-  box-shadow: 0 3px 0px 0 rgba(65, 62, 102, 0.08);
-  transition: all .3s ease-in-out;
-  padding: 36px 0;
-  position: relative;
-}
-
-#pricing .card:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 5px;
-  background-color: #1bb1dc;
-  transition: 0.5s;
-}
-
-#pricing .card:hover {
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-  box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
-}
-
-#pricing .card:hover:after {
-  width: 100%;
-}
-
-#pricing .card .card-header {
-  background-color: white;
-  border-bottom: 0px;
-  -moz-text-align-last: center;
-  text-align-last: center;
-}
-
-#pricing .card .card-title {
-  margin-bottom: 16px;
-  color: #535074;
-}
-
-#pricing .card .card-block {
-  padding-top: 0;
-  text-align: center;
-}
-
-#pricing .card .list-group-item {
-  border: 0px;
-  padding: 6px;
-  color: #413e66;
-  font-weight: 300;
-}
-
-#pricing .card h3 {
-  font-size: 64px;
-  margin-bottom: 0px;
-  color: #535074;
-}
-
-#pricing .card h3 .currency {
-  font-size: 30px;
-  position: relative;
-  font-weight: 400;
-  top: -30px;
-  letter-spacing: 0px;
-}
-
-#pricing .card h3 .period {
-  font-size: 16px;
-  color: #6c67a3;
-  letter-spacing: 0px;
-}
-
-#pricing .card .list-group {
-  margin-bottom: 15px;
-}
-
-#pricing .card .btn {
-  text-transform: uppercase;
-  font-size: 13px;
-  font-weight: 500;
-  color: #5f5b96;
-  border-radius: 0;
-  padding: 10px 24px;
-  letter-spacing: 1px;
-  border-radius: 3px;
-  display: inline-block;
-  background: #1bb1dc;
-  color: #fff;
-}
-
-#pricing .card .btn:hover {
-  background: #0a98c0;
-}
-
-/* Frequently Asked Questions Section
---------------------------------*/
-
-#faq {
-  padding: 60px 0;
-  overflow: hidden;
-}
-
-#faq #faq-list {
-  padding: 0;
-  list-style: none;
-}
-
-#faq #faq-list li {
-  border-bottom: 1px solid #ebebeb;
-}
-
-#faq #faq-list a {
-  padding: 22px 0;
-  display: block;
-  position: relative;
-  font-family: "Montserrat", sans-serif;
-  font-size: 20px;
-  line-height: 1;
-  font-weight: 400;
-  padding-right: 20px;
-}
-
-#faq #faq-list i {
-  font-size: 24px;
-  position: absolute;
-  right: 0;
-  top: 20px;
-}
-
-#faq #faq-list p {
-  margin-bottom: 20px;
-}
-
-#faq #faq-list a.collapse {
-  color: #1bb1dc;
-}
-
-#faq #faq-list a.collapsed {
-  color: #000;
-}
-
-#faq #faq-list a.collapsed i::before {
-  content: "\f2c7" !important;
 }
 
 /*--------------------------------------------------------------
@@ -1935,23 +1548,6 @@ h5{
 # Responsive Media Queries
 --------------------------------------------------------------*/
 
-@media (min-width: 991px) {
-  #call-to-action .cta-btn-container {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-  }
-}
-
 @media (min-width: 992px) {
   #intro .intro-info {
     padding-top: 80px;
@@ -1963,44 +1559,17 @@ h5{
 }
 
 @media (max-width: 991px) {
-  #topbar {
-    display: none;
-  }
+ 
 
   #header {
     height: 70px;
     padding: 15px 0;
+    text-align: center;
   }
 
   #header .logo h1 {
     font-size: 28px;
     padding: 8px 0;
-  }
-
-  #why-us .why-us-content {
-    padding-top: 30px;
-  }
-
-  #pricing {
-    padding-bottom: 30px;
-  }
-
-  #pricing .card {
-    margin-bottom: 50px;
-  }
-}
-
-@media (max-width: 768px) {
-  .back-to-top {
-    bottom: 15px;
-  }
-
-  #faq #faq-list a {
-    font-size: 18px;
-  }
-
-  #faq #faq-list i {
-    top: 13px;
   }
 }
 
@@ -2061,26 +1630,19 @@ h5{
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
-.fadeInRight {
-    -webkit-animation-name: fadeInRight;
-    animation-name: fadeInRight;
-}
-.animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;}
 .image{
   width: 50%;
   height: 50%;
 }
 p{
-  color:#394042;
+  color:#585b5c;
   font-family: 'Poppins',sans-serif;
   line-height: 28px;
 }
 h3{
   font-family: 'Poppins',sans-serif;
+  color: #545455;
+
 }
 h4{
   font-family: 'Poppins',sans-serif;
@@ -2090,40 +1652,6 @@ h4{
   background-color: #1493f5;
 }
 
-/* span{
-  background-color: #ffc200; opacity: 0.8;
-  color: #525455;
-  display: inline-block;
-  border-radius: 15px;  
-  text-align: center;
-  font-style: UPPERCASE;
-  font-family: 'Open Sans',sans-serif;
-}
-
-.product-title span{
-  width: 150px;
-  height: 25px;
-}
-.section-title span{
-  width: 90px;
-  height: 25px; 
-}
-.nav-logo img{
-  height: 2rem;
-  padding-top: 0%;
-}
-.home-inner{
-   background-image: url("../assets/banner.jpg");
-}
-
-.fadeInUp{
-  -webkit-animation-name: fadeInUp;
-    animation-name: fadeInUp;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-} */
 
 /* page fix */
 .landing-page{
